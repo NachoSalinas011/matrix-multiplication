@@ -1,15 +1,14 @@
-package test;
+package test.Secuencial;
 
 import data.Matriz;
 import data.MultiplicarMatriz_Secuencial;
 
-public class Test_Multiplicar_Secuencial {
+public class Test_Multiplicar_Secuencial_Grande {
 
 	public static void main(String[] args) {
-		
 		//Matrices a utilizar
-		int[][] matriz_uno = Matriz.crear_Random(2, 3);
-		int[][] matriz_dos = Matriz.crear_Random(3, 5);
+		int[][] matriz_uno = Matriz.crear_Random(1000, 1000);
+		int[][] matriz_dos = Matriz.crear_Random(1000, 1000);
 		
 		try {
 			if (!Matriz.SePuedenMultiplicar(matriz_uno, matriz_dos)) {
@@ -20,7 +19,7 @@ public class Test_Multiplicar_Secuencial {
 		}
 		
 		// Variables para calcular el tiempo de ejecución
-		double tiempoInicial, tiempoFinal;
+		long tiempoInicial, tiempoFinal;
 		
 		tiempoInicial = System.nanoTime();
 		//Multiplicar matrices
@@ -31,18 +30,17 @@ public class Test_Multiplicar_Secuencial {
 		
 		//Validaciones
 		System.out.println("Tiempo de ejecución (nanosegundos): " + tiempoFinal);
-		System.out.println("\nMatriz A\n");		
-		Matriz.imprimir(matriz_uno);
-		
-		System.out.println("\n----------------------------------");
-		System.out.println("\nMatriz B\n");
-		
-		Matriz.imprimir(matriz_dos);
-		
-		System.out.println("\n----------------------------------");
-		System.out.println("\nResultado\n");
-		Matriz.imprimir(result);
-
+//		System.out.println("\nMatriz A\n");		
+//		Matriz.imprimir(matriz_uno);
+//		
+//		System.out.println("\n----------------------------------");
+//		System.out.println("\nMatriz B\n");
+//		
+//		Matriz.imprimir(matriz_dos);
+//		
+//		System.out.println("\n----------------------------------");
+//		System.out.println("\nResultado\n");
+//		Matriz.imprimir(result);
 	}
 
 }
